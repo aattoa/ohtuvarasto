@@ -4,12 +4,19 @@ from varasto import Varasto
 
 class TestVarasto(unittest.TestCase):
     def setUp(self):
-        self.varasto = Varasto(0)
+        self.varasto = Varasto(-1, -1)
+        self.varasto = Varasto(0, 0)
         self.varasto = Varasto(0, -1)
         self.varasto = Varasto(10, -1)
         self.varasto = Varasto(10, 1)
         self.varasto = Varasto(10, 11)
         self.varasto = Varasto(10)
+
+    def test_str(self):
+        self.assertIsNotNone(str(self.varasto))
+
+    def test_capacity(self):
+        self.assertEqual(self.varasto.paljonko_mahtuu(), 10)
 
     def test_konstruktori_luo_tyhjan_varaston(self):
         self.assertAlmostEqual(self.varasto.saldo, 0)
