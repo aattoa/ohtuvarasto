@@ -1,0 +1,30 @@
+[MASTER]
+
+ignore-paths=src/tests
+
+[MESSAGE CONTROL]
+
+disable=raw-checker-failed,
+        bad-inline-option,
+        locally-disabled,
+        file-ignored,
+        suppressed-message,
+        useless-suppression,
+        deprecated-pragma,
+        use-symbolic-message-instead,
+        missing-module-docstring,
+        missing-function-docstring,
+        missing-class-docstring
+
+[FORMAT]
+
+max-line-length=80
+indent-string="    "
+max-nested-blocks=2
+max-statements=10
+
+[REFACTORING]
+
+[DESIGN]
+
+max-bool-expr=3
